@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'San Francisco bold';
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff);
+}
+@font-face {
+  font-family: 'San Francisco';
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff);
+}
+
+a {
+  text-decoration: none;
+  color: #4c5257;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  font-size: 1.4rem;
+}
+
+.show-sidebar {
+  transform: translateX(0) !important;
+}
+
+aside.sidebar {
+  width: 400px;
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: all 1s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.sidebar h3 {
+  font-family: 'San Francisco bold';
+  text-align: center;
+  font-size: 1.6rem;
+}
+.sidebar .links {
+  font-family: 'San Francisco';
+}
+.links,
+.social {
+  padding: 0;
+  flex-grow: 1;
+}
+
+.links li {
+  padding: 0.7rem;
+  padding-left: 2rem;
+}
+
+.links li:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.links li a {
+  display: block;
+  text-transform: capitalize;
+}
+
+.social {
+  display: flex;
+  padding-left: 2rem;
+  justify-content: center;
+  align-items: end;
+}
+
+.social li {
+  padding: 0 10px;
+}
+
+button.close-sidebar {
+  position: absolute;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 1.5rem;
+  top: 10px;
+  color: #e83030;
+  cursor: pointer;
+}
