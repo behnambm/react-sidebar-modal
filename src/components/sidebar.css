@@ -26,11 +26,11 @@ ul li a {
 }
 
 aside.sidebar {
-  width: 400px;
+  width: 350px;
   display: flex;
   flex-flow: column;
   background-color: #fff;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
   transition: all 1s;
   position: fixed;
   left: 0;
@@ -88,4 +88,10 @@ button.close-sidebar {
   top: 10px;
   color: #e83030;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100% !important;
+  }
 }
