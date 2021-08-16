@@ -2,11 +2,14 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import './sidebar.css'
 import { links, social } from '../data'
+import { useGlobalContext } from '../context'
 
 function Sidebar() {
+  const { isSidebarOpen, closeSidebar } = useGlobalContext()
+
   return (
-    <aside className='sidebar show-sidebar'>
-      <button className='close-sidebar'>
+    <aside className={`sidebar ${isSidebarOpen && 'show-sidebar'}`}>
+      <button className='close-sidebar' onClick={closeSidebar}>
         <FaTimes />
       </button>
       <div className='sidebar-header'>

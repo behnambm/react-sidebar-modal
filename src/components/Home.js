@@ -4,11 +4,11 @@ import { useGlobalContext } from '../context'
 import './home.css'
 
 function Home() {
-  const { openModal } = useGlobalContext()
+  const { openModal, openSidebar } = useGlobalContext()
 
   return (
     <div>
-      <button className='sidebar-btn'>
+      <button className='sidebar-btn' onClick={openSidebar}>
         <FaBars />
       </button>
       <button className='modal-btn' onClick={openModal}>
